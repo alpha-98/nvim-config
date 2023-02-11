@@ -49,6 +49,18 @@ return packer.startup(function(use)
     use "rose-pine/neovim" -- rose-pine theme
     use "bluz71/vim-moonfly-colors" -- moonfly theme
 
+    --cmp (completions)
+    use { "hrsh7th/nvim-cmp"} -- The completion plugin
+    use { "hrsh7th/cmp-buffer"} -- buffer completions
+    use { "hrsh7th/cmp-path"} -- path completions
+	use { "saadparwaiz1/cmp_luasnip"} -- snippet completions
+	use { "hrsh7th/cmp-nvim-lsp"}
+	use { "hrsh7th/cmp-nvim-lua"}
+
+    -- Snippets
+    use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
+    use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
