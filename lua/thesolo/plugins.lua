@@ -44,8 +44,10 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in nvim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-    use "bluz71/vim-moonfly-colors" -- moonfly theme
 
+    --THEMES--
+    use "rose-pine/neovim" -- rose-pine theme
+    use "bluz71/vim-moonfly-colors" -- moonfly theme
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
