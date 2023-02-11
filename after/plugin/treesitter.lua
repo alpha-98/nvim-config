@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-    ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java", "yaml", "markdown", "markdown_inline" },
+    ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "yaml", "markdown", "markdown_inline" },
     sync_install = false,
     auto_install = true,
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
@@ -12,10 +12,9 @@ configs.setup({
 		enable = true, -- false will disable the whole extension
 		disable = { "css" }, -- list of language that will be disabled
 	},
-	autopairs = {
-		enable = true,
-	},
+	autopairs = { enable = true, },
 	indent = { enable = true, disable = { "python", "css" } },
+    context_commentstring = { enable = true, enable_autocmd = false, },
     rainbow = {
     enable = true,
     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
