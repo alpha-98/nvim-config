@@ -90,8 +90,15 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
 
     --nvim-tree
-    use { "kyazdani42/nvim-tree.lua"}
-    use { "kyazdani42/nvim-web-devicons"}
+    use  "nvim-tree/nvim-tree.lua"
+    use  "nvim-tree/nvim-web-devicons"
+
+    -- transparent
+    -- use "xiyaowong/nvim-transparent"
+
+    --BufferLine
+    use "akinsho/bufferline.nvim"
+	use "moll/vim-bbye"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -2,7 +2,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -22,10 +22,10 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- primeagen keymaps
-keymap("n", "<leader>pv", ":Ex<CR>", opts) 
+keymap("n", "<leader>pv", ":Ex<CR>", opts)
 keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts) 
+keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 keymap("n", "<leader>y", '"*y', opts)
@@ -85,7 +85,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 
 --nvimTree
 keymap("n", "<leader>e","<cmd>NvimTreeToggle<CR>", opts)
