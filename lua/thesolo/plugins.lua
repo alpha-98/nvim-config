@@ -44,6 +44,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in nvim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 	--Comment
 	use("numToStr/Comment.nvim") -- Easily comment stuff
@@ -70,10 +71,12 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim") -- simple to use language server installer
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- LSP diagnostics and code actions
+    use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 
 	-- Treesitter
 	use({
@@ -82,6 +85,7 @@ return packer.startup(function(use)
 	})
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/playground")
+	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	--Harpoon
 	use("theprimeagen/harpoon")
@@ -97,7 +101,7 @@ return packer.startup(function(use)
 	-- use "xiyaowong/nvim-transparent"
 
 	--BufferLine
-	use({ "akinsho/bufferline.nvim", tag = "v3.*"})
+	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 	use("moll/vim-bbye")
 
 	use("rest-nvim/rest.nvim")
@@ -108,6 +112,9 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 
 	use("szw/vim-maximizer")
+
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
