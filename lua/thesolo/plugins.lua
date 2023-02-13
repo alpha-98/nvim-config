@@ -100,7 +100,14 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
-	use({ "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } })
+	use("rest-nvim/rest.nvim")
+
+	-- tmux & slpit window navigation
+	use("christoomey/vim-tmux-navigator")
+
+	use("tpope/vim-surround")
+
+    use("szw/vim-maximizer")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
