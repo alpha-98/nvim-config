@@ -16,7 +16,7 @@ vim.g.maplocalleader = " "
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
---   visual_block_mode = "x", 
+--   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
 
@@ -53,7 +53,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -88,4 +88,4 @@ keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 
 --nvimTree
-keymap("n", "<leader>e","<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
