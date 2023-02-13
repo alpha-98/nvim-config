@@ -97,7 +97,7 @@ return packer.startup(function(use)
 	-- use "xiyaowong/nvim-transparent"
 
 	--BufferLine
-	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "v3.*"})
 	use("moll/vim-bbye")
 
 	use("rest-nvim/rest.nvim")
@@ -107,7 +107,7 @@ return packer.startup(function(use)
 
 	use("tpope/vim-surround")
 
-    use("szw/vim-maximizer")
+	use("szw/vim-maximizer")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
