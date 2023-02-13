@@ -1,6 +1,6 @@
 return {
 	settings = {
-
+		-- make language server aware of runtime files
 		Lua = {
 			diagnostics = {
 				globals = { "vim" },
