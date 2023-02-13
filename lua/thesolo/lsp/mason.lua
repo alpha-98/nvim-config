@@ -1,6 +1,10 @@
 local servers = {
 	"lua_ls",
 	"jsonls",
+    "tsserver",
+    "html",
+    "cssls",
+    "tailwindcss"
 }
 
 local settings = {
