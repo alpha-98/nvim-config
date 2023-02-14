@@ -14,15 +14,19 @@ vim.g.loaded_netrwPlugin = 1
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-	disable_netrw = true,
-	hijack_netrw = true,
-	open_on_setup = false,
+	auto_reload_on_write = true, -- default Reloads the explorer every time a buffer is written to.
+	disable_netrw = true, -- default Completely disable netrw
+	hijack_netrw = true, -- default Hijack netrw windows
+	hijack_cursor = true, -- Keeps the cursor on the first letter of the filename when moving in the tree.
+	hijack_unnamed_buffer_when_opening = true, -- Opens in place of the unnamed buffer if it's empty.
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,
 	},
+	-- UI rendering setup
 	renderer = {
-		highlight_git = true,
+		highlight_git = false,
+		highlight_modified = "icons", -- show modified icons in tree
 		root_folder_modifier = ":t",
 		icons = {
 			glyphs = {
@@ -50,6 +54,7 @@ nvim_tree.setup({
 			},
 		},
 	},
+	-- Show LSP and COC diagnostics in the signcolumn
 	diagnostics = {
 		enable = true,
 		show_on_dirs = true,
@@ -74,11 +79,25 @@ nvim_tree.setup({
 	actions = {
 		open_file = {
 			quit_on_open = false,
-			resize_window = true,
+			resize_window = true, -- default
 			window_picker = {
 				enable = false,
 			},
 		},
+	},
+	-- Git integration (not recommended for large projects. it will not render anything until the git process returned the data.)
+	git = {
+		enable = false,
+		ignore = false,
+		show_on_dirs = true,
+		show_on_open_dirs = true,
+		timeout = 2000,
+	},
+	-- Indicate which file have unsaved modification.
+	modified = {
+		enable = true,
+		show_on_dirs = true,
+		show_on_open_dirs = true,
 	},
 })
 
