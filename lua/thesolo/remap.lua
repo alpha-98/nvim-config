@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 local opts = { noremap = true, silent = true }
 
@@ -102,7 +102,6 @@ keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current
 -- restart lsp server (not on youtube nvim video)
 keymap("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
-
 --nvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
@@ -122,4 +121,3 @@ keymap("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
 keymap("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
 keymap("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
 keymap("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
-
